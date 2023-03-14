@@ -3,9 +3,10 @@
 
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
-System.Console.WriteLine("Введите значение : ");
+System.Console.WriteLine("Введите значение от которого ведется отсчет промежутка чисел : ");
 int N = Convert.ToInt32(System.Console.ReadLine());
-
+System.Console.WriteLine("Введите крайнее значение промежутка чисел : ");
+int M = Convert.ToInt32(System.Console.ReadLine()); 
 
 /// <summary>
 /// Метод выводит все натуральные числа в промежутку от N до 1
@@ -18,4 +19,4 @@ string NaturNumbers( int start , int end)
     if(start == end) return start.ToString(); 
     return(start + ", " + NaturNumbers(start - 1, end) );
 }
-System.Console.WriteLine(NaturNumbers(N,1));
+System.Console.WriteLine(NaturNumbers(N,M));
